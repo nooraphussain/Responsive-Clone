@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- early connection to an external domain (such as a server) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=Bebas+Neue&display=swap" rel="stylesheet">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">  
+</head>
+<body>
+    <header class="position-relative">
+
+        <!-- navigation bar -->
+        <nav class="navbar navbar-expand">
+            <div class="container">
+                <img src="Assets/img/Netflix_Logo_PMS.png" alt="Netflix-logo">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" >
+                    <div class="btn-group me-2">
+                            <button id="languageButton" type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" >
+                                <i class="bi bi-translate me-1"></i>English
+                            </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#" onclick="updateButtonText('English')">English</a></li>
+                          <li><a class="dropdown-item" href="#" onclick="updateButtonText('Hindi')">हिन्दी</a></li>
+                        </ul>
+                      </div>
+                    <button type="button" class="red-btn btn btn-danger fw-semibold"> Sign in</button>
+                </div>
+            </div>
+        </nav> 
+
+        <!-- hero page -->
+        <section class="hero container h-75 d-flex flex-column align-items-center justify-content-center">
+            <h1 class="hero-title text-white text-center">Unlimited movies, TV shows and more</h1>
+            <p class="hero-plan-text text-white text-center">Starts at ₹149. Cancel at any time.</p>
+            <p class="hero-sub-text text-wrap text-white text-center">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="row g-3 d-flex align-items-center justify-content-center w-100 w-lg-75">
+                <div class="form-floating col-auto">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" >
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="get-started-btn btn btn-danger fw-bold pt-3 pb-3 ps-4 pe-4">Get Started </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- hero page curve  -->
+        <div class="curve container-fluid position-absolute w-100"></div>
+    </header>
+
+    <!-- features section -->
+    <section class="position-relative carousel">
+
+        <!-- carousel  -->
+        <div class=" container carousel-container pt-3">
+            <div class="title pb-3 text-start"><h3>Trending Now</h3></div>
+
+            <!-- drop-downs -->
+            <div class="btn-group me-2">
+              <button id="languageButton" type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" >
+                  <i class="bi bi-translate me-1"></i>India
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" onclick="updateButtonText('India')">India</a></li>
+                <li><a class="dropdown-item" href="#" onclick="updateButtonText('Global')">Global</a></li>
+              </ul>
+            </div>
+
+            <div class="btn-group me-2">
+              <button id="languageButton" type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" >
+                  <i class="bi bi-translate me-1"></i>Movies
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" onclick="updateButtonText('Movies')">Movies</a></li>
+                <li><a class="dropdown-item" href="#" onclick="updateButtonText('TV Shows')">TV Shows</a></li>
+              </ul>
+            </div>
+
+            <br><br>
+
+            <div onClick="prev();" class="prev"></div>
+            <div class="carousel-list">
+              <ul class="slider-content">
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/1.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/2vijay 69.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/3bool bulayya.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/4bool bulayya 2.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/5devara.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/6mey azhagan.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/7movie.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/8movie.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/9movie.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/1.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/2vijay 69.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/3bool bulayya.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/4bool bulayya 2.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/5devara.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/6mey azhagan.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/7movie.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/8movie.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/9movie.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/1.webp"
+                    />
+                  </div>
+                </li>
+        
+                <li>
+                  <div>
+                    <img
+                      src="Assets/img/2vijay 69.webp"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div onClick="next();" class="next">
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+        </div>           
+    </section>
+
+    <!-- features  -->
+    <section class="features container-fluid" >
+        <div class="position-realtive">
+            <div class="container pt-3 pb-2 ps-3">
+                <h4 class="text-start text-light">More reasons to join</h4>   
+            </div>
+        </div>
+        <div class="container card-container ">
+            <div class="row g-3">
+                <div class="col-sm-12 col-md-3 col-12">
+                    <div class="card d-flex flex-column ps-3 pe-3 pt-3">
+                        <div class="card-head">
+                            <h4 class="text-light">Enjoy on your TV</h4>
+                            <p class="text-secondary">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                        </div>
+                        <div class="d-flex align-items-end justify-content-end pb-2" >
+                            <img class="card-image" src="Assets/img/vector5.png" alt="monitor-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-12">
+                    <div class="card">
+                        <div class="card d-flex flex-column ps-3 pe-3 pt-3">
+                            <div class="card-head">
+                                <h4 class="text-light">Download your shows to watch offline</h4>
+                                <p class="text-secondary">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                            </div>
+                            <div class="d-flex align-items-end justify-content-end pb-2" >
+                                <img class="card-image" src="Assets/img/vector2.png" alt="Download">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-12">
+                    <div class="card">
+                        <div class="card d-flex flex-column ps-3 pe-3 pt-3">
+                            <div class="card-head">
+                                <h4 class="text-light">Watch everywhere </h4>
+                                <p class="text-secondary">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+                            </div>
+                            <div class="d-flex align-items-end justify-content-end pb-2" >
+                                <img class="card-image" src="Assets/img/vector4.png" alt="telescope-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 col-12">
+                    <div class="card">
+                        <div class="card d-flex flex-column ps-3 pe-3 pt-3">
+                            <div class="card-head">
+                                <h4 class="text-light">Create profiles for kids</h4>
+                                <p class="text-secondary">Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+                            </div>
+                            <div class="d-flex align-items-end justify-content-end pb-2" >
+                                <img class="card-image" src="Assets/img/vector3.png" alt="profiles-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq-section py-5 bg-black text-light">
+        <div class="container">
+             <h2 class="text-start mb-4">Frequently Asked Questions</h2>
+             <div class="accordion" id="theAccordion">
+                    
+                <div class="accordion-item mb-4">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed p-4 d-flex align-items-center justify-content-between" 
+                            type="button" data-bs-toggle="collapse" 
+                            data-bs-target="#collapseOne" 
+                            aria-expanded="false" 
+                            aria-controls="collapseOne">
+                      What is Netflix?
+                      
+                    </button>
+                  </h2>
+                
+                  
+                  
+                    <div id="collapseOne" class="accordian-collapse collapse" data-bs-parent="theAccordian">
+                        <div class="accordion-body">
+                            <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+                                <br><br> You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-4">
+                    <h2 class="accordian-header">
+                        <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How musch does Netflix cost?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordian-collapse collapse" data-bs-parent="theAccordian">
+                        <div class="accordion-body">
+                            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-4">
+                    <h2 class="accordian-header">
+                        <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Where can I watch?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordian-collapse collapse" data-bs-parent="theAccordian">
+                        <div class="accordion-body">
+                            <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+                                <br><br> You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-4">
+                    <h2 class="accordian-header">
+                        <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            How do I cancel?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordian-collapse collapse" data-bs-parent="theAccordian">
+                        <div class="accordion-body">
+                            <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-4">
+                    <h2 class="accordian-header">
+                        <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            What can i watch on Netflix?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordian-collapse collapse" data-bs-parent="theAccordian">
+                        <div class="accordion-body">
+                            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-4">
+                    <h2 class="accordian-header">
+                        <button class="accordion-button collapsed p-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Is Netflix good for kids?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordian-collapse collapse" data-bs-parent="theAccordian">
+                        <div class="accordion-body">
+                            <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+                                <br><br>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- foot email section  -->
+    <section class="foot-email-section container-fluid bg-black pt-1 pb-2">
+        <p class="text-center mt-5 text-light">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="row g-3 d-flex align-items-center justify-content-center w-100 w-lg-100 m-auto">
+                <div class="form-floating col-auto">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" >
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="get-started-btn btn btn-danger fw-bold pt-3 pb-3 ps-4 pe-4">Get Started</button>
+                </div>
+            </form>
+    </section>
+
+    <!-- footer  -->
+     <footer class="bg-black text-light pt-3 pb-3">
+        <div class="container mt-5">
+            <div class="footer-div1" >
+                <p>Questions? Call <a href="#">000-800-919-1694</a></p>
+            </div>
+            <div class="row">
+                
+                <div class="col-12 col-sm-3 footer-col">
+                    <a href="#">FAQ</a><br>
+                    <a href="#">Investor Relations</a><br>
+                    <a href="#">Privacy</a><br>
+                    <a href="#">Speed test</a>
+                </div>
+                
+                <div class="col-12 col-sm-3 footer-col">
+                    <a href="#">Help Centre</a><br>
+                    <a href="#">Jobs</a><br>
+                    <a href="#">Cookie Preferences</a><br>
+                    <a href="#">Legal Notices</a>
+                </div>
+                
+                <div class="col-12 col-sm-3 footer-col">
+                    <a href="#">Account</a><br>
+                    <a href="#">Ways to Watch</a><br>
+                    <a href="#">Corporate Information</a><br>
+                    <a href="#">Only on Netflix</a>
+                </div>
+                
+                <div class="col-12 col-sm-3 footer-col">
+                    <a href="#">Media Centre</a><br>
+                    <a href="#">Terms of Use</a><br>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <br><br>
+            <div class="btn-group me-2">
+              <button id="languageButton" type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" >
+                  <i class="bi bi-translate me-1"></i>English
+              </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" onclick="updateButtonText('English')">English</a></li>
+            <li><a class="dropdown-item" href="#" onclick="updateButtonText('Hindi')">हिन्दी</a></li>
+          </ul>
+        </div>
+            <br><br>
+            <p class="mt-2">Netflix India by Noora</p>
+        </div>
+     </footer>
+
+    
+    
+    
+    
+    
+    <!-- bootstrap script -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous"></script>
+</body>
+</html>
